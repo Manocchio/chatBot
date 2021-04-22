@@ -74,6 +74,7 @@ sgd = SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True)
 model.compile(loss="categorical crossentropy",
               optimizer=sgd, metrics=['accuracy'])
 
+# TypeError not iterable
 model.fit(np.array(trainX), np.array(trainY),
           epochs=200, batch_size=5, verbose=1)
 
