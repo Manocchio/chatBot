@@ -1,7 +1,7 @@
 import random
 import json
 import numpy as np
-
+import pickle
 import nltk
 import codecs
 from nltk.stem import WordNetLemmatizer
@@ -60,22 +60,21 @@ random.shuffle(training)
 training = np.array(training)
 
 
-trainX = list(training[':', 0])
-trainY = list(training[':', 1])
+trainX = list(training[:, 0])
+trainY = list(training[:, 1])
 
 model = Sequential()
-
-model.add(Dense(128, input_shape=len(trainX[0]),), activation='relu'))
+model.add(Dense(128, input_shape=(len(trainX[0]),), activation='relu'))
 model.add(Dropout(0, 5))
 model.add(Dense(64, activation='relu'))
 model.add(Dropout(0, 5))
-odel.add(Dense(len(trainY[0]), activation='softmax'))
+model.add(Dense(len(trainY[0]), activation='softmax'))
 
-sgd=SGD(lr = 0.01, decay = 1e-6, momentum = 0.9, nesterov = True)
-model.compile(loss = "categorical crossentropy",
-              optimizer = sgd, metrics = ['accuracy'])
+sgd = SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True)
+model.compile(loss="categorical crossentropy",
+              optimizer=sgd, metrics=['accuracy'])
 
 model.fit(np.array(trainX), np.array(trainY),
-          epochs = 200, batch_size = 5, verbose =1)
+          epochs=200, batch_size=5, verbose=1)
 
 mode.save("chatbot model.model")
