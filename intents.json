@@ -19,6 +19,22 @@
             ]
         },
         {
+            "tag": "name",
+            "patterns": [
+                "Qual é seu nome?",
+                "Como você se chama?",
+                "Quem é voce?",
+                "Qual é o seu nome?",
+                "Você pode me dizer o seu nome?"
+            ],
+            "responses": [
+                "Você pode me chamar de Domingo",
+                "Eu me chamo Domingo",
+                "Meu nome é Domingo",
+                "Fico feliz por você ter perguntado, meu nome é Domingo."
+            ]
+        },
+        {
             "tag": "goodbye",
             "patterns": [
                 "Tchau",
