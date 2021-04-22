@@ -1,0 +1,39 @@
+{
+    "intents": [
+        {
+            "tag": "greetings",
+            "patterns": [
+                "Olá",
+                "Ei",
+                "Bom dia",
+                "E aí",
+                "Opa",
+                "Beleza?",
+                "Oi"
+            ],
+            "responses": [
+                "Olá!",
+                "Opa, e aí?",
+                "O que posso fazer por você?",
+                "Oi!, tudo bem com você?"
+            ]
+        },
+        {
+            "tag": "goodbye",
+            "patterns": [
+                "Tchau",
+                "Falou",
+                "Adeus",
+                "Estou indo embora",
+                "Até mais"
+            ],
+            "responses": [
+                "Adeus",
+                "Tchau, nos vemos depois ;-;",
+                "Você já vai? Que pena...",
+                "Espero te ver depois",
+                "Até outro dia!"
+            ]
+        }
+    ]
+}
